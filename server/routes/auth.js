@@ -5,6 +5,11 @@ const { authenticateToken, generateToken } = require('../middleware/auth');
 
 const router = express.Router();
 
+// Test route to verify auth routes are working
+router.get('/test', (req, res) => {
+  res.json({ message: 'Auth routes are working!' });
+});
+
 // Register user
 router.post('/register', [
   body('firstName')
