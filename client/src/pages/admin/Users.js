@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { usersAPI } from '../../services/api';
-import { FiSearch, FiUser, FiMail, FiPhone, FiEdit2, FiTrash2, FiEye } from 'react-icons/fi';
+import { FiSearch, FiUser, FiEdit2, FiTrash2, FiEye } from 'react-icons/fi';
 import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const AdminUsers = () => {

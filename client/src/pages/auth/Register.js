@@ -168,7 +168,7 @@ const Register = () => {
                   {...register('phone', {
                     required: 'Phone number is required',
                     pattern: {
-                      value: /^[\+]?[1-9][\d]{0,15}$/,
+                      value: /^[+]?[1-9][\d]{0,15}$/,
                       message: 'Invalid phone number'
                     }
                   })}

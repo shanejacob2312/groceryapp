@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ordersAPI } from '../services/api';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
@@ -13,9 +13,9 @@ const OrderDetail = () => {
 
   useEffect(() => {
     fetchOrder();
-  }, [id]);
+  }, [fetchOrder]);
 
-  const fetchOrder = async () => {
+  const fetchOrder = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -28,7 +28,7 @@ const OrderDetail = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   const getStatusColor = (status) => {
     switch (status) {

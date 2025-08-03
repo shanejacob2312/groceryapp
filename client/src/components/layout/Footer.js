@@ -20,15 +20,15 @@ const Footer = () => {
               Quality products, competitive prices, and exceptional service.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              <button className="text-secondary-400 hover:text-white transition-colors">
                 <FiFacebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              </button>
+              <button className="text-secondary-400 hover:text-white transition-colors">
                 <FiTwitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-secondary-400 hover:text-white transition-colors">
+              </button>
+              <button className="text-secondary-400 hover:text-white transition-colors">
                 <FiInstagram className="w-5 h-5" />
-              </a>
+              </button>
             </div>
           </div>
 

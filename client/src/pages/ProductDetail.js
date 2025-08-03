@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { productsAPI } from '../services/api';
 import { useCart } from '../contexts/CartContext';
@@ -16,9 +16,9 @@ const ProductDetail = () => {
 
   useEffect(() => {
     fetchProduct();
-  }, [id]);
+  }, [fetchProduct]);
 
-  const fetchProduct = async () => {
+  const fetchProduct = useCallback(async () => {
     try {
       setLoading(true);
       const response = await productsAPI.getById(id);
@@ -29,7 +29,7 @@ const ProductDetail = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
 
   const handleAddToCart = () => {
     if (product) {

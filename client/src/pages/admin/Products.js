@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { productsAPI } from '../../services/api';
-import { FiPlus, FiEdit2, FiTrash2, FiEye, FiSearch } from 'react-icons/fi';
+import { FiPlus, FiEdit2, FiTrash2, FiSearch } from 'react-icons/fi';
 import LoadingSpinner from '../../components/ui/LoadingSpinner';
 import ProductImage from '../../components/ui/ProductImage';
 
