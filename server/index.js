@@ -51,10 +51,15 @@ mongoose.connect(dbUrl, {
 });
 
 // Routes
+console.log('🚀 Mounting routes...');
 app.use('/api/auth', authRoutes);
+console.log('✅ Auth routes mounted at /api/auth');
 app.use('/api/products', productRoutes);
+console.log('✅ Product routes mounted at /api/products');
 app.use('/api/orders', orderRoutes);
+console.log('✅ Order routes mounted at /api/orders');
 app.use('/api/users', userRoutes);
+console.log('✅ User routes mounted at /api/users');
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
@@ -72,6 +77,7 @@ app.use((err, req, res, next) => {
 
 // 404 handler
 app.use('*', (req, res) => {
+  console.log('❌ Route not found:', req.originalUrl);
   res.status(404).json({ message: 'Route not found' });
 });
 
