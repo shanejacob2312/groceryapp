@@ -1,3 +1,7 @@
+to login as admin:
+admin@grocerystore.com
+admin123
+
 # Grocery Store Application
 
 A full-stack grocery delivery application built with React (frontend) and Node.js/Express (backend).
