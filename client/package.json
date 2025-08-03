@@ -6,16 +6,16 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "react-scripts": "5.0.1",
-    "axios": "^1.4.0",
+    "react-dropzone": "^14.2.3",
+    "react-hook-form": "^7.44.3",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.10.1",
     "react-query": "^3.39.3",
-    "react-hook-form": "^7.44.3",
-    "react-dropzone": "^14.2.3",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,9 +43,9 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.3.2",
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.24"
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.3.2"
   },
   "proxy": "http://localhost:5000",
   "overrides": {
@@ -53,4 +53,4 @@
     "glob": "^9.3.5",
     "svgo": "^2.8.0"
   }
-} 
+}
