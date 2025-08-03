@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ordersAPI, usersAPI } from '../../services/api';
-import { FiUsers, FiShoppingBag, FiDollarSign, FiTrendingUp, FiPackage, FiTruck } from 'react-icons/fi';
+import { FiUsers, FiShoppingBag, FiDollarSign, FiPackage, FiTruck } from 'react-icons/fi';
 import LoadingSpinner from '../../components/ui/LoadingSpinner';
 
 const Dashboard = () => {

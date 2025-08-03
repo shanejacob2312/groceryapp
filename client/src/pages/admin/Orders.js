@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ordersAPI } from '../../services/api';
-import { FiSearch, FiFilter, FiEye, FiEdit2, FiTruck } from 'react-icons/fi';
+import { FiSearch, FiEye } from 'react-icons/fi';
 import LoadingSpinner from '../../components/ui/LoadingSpinner';
 import ProductImage from '../../components/ui/ProductImage';
 

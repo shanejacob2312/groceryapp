@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useCallback } from 'react';
 import { productsAPI } from '../services/api';
 import ProductCard from '../components/products/ProductCard';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
@@ -14,11 +13,7 @@ const Products = () => {
     sortBy: 'name'
   });
 
-  useEffect(() => {
-    fetchProducts();
-  }, [filters]);
-
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     try {
       setLoading(true);
       setError(null);
@@ -42,7 +37,11 @@ const Products = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [filters]);
+
+  useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
 
   if (loading) return <LoadingSpinner />;
   if (error) return <div className="text-center text-red-600">{error}</div>;
@@ -98,7 +97,6 @@ const Products = () => {
       {productsArray.length === 0 ? (
         <div className="text-center py-12">
           <p className="text-gray-500 text-lg">No products found</p>
-          <p className="text-gray-400 text-sm mt-2">Try adjusting your filters or check back later.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

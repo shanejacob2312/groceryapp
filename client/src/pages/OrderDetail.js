@@ -11,10 +11,6 @@ const OrderDetail = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchOrder();
-  }, [fetchOrder]);
-
   const fetchOrder = useCallback(async () => {
     try {
       setLoading(true);
@@ -29,6 +25,10 @@ const OrderDetail = () => {
       setLoading(false);
     }
   }, [id]);
+
+  useEffect(() => {
+    fetchOrder();
+  }, [fetchOrder]);
 
   const getStatusColor = (status) => {
     switch (status) {

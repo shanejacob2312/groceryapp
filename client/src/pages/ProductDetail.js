@@ -14,10 +14,6 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
-  useEffect(() => {
-    fetchProduct();
-  }, [fetchProduct]);
-
   const fetchProduct = useCallback(async () => {
     try {
       setLoading(true);
@@ -30,6 +26,10 @@ const ProductDetail = () => {
       setLoading(false);
     }
   }, [id]);
+
+  useEffect(() => {
+    fetchProduct();
+  }, [fetchProduct]);
 
   const handleAddToCart = () => {
     if (product) {
@@ -103,7 +103,7 @@ const ProductDetail = () => {
                 <p><strong>Category:</strong> {product.category}</p>
                 <p><strong>Stock:</strong> {product.stock} units</p>
                 {product.weight && <p><strong>Weight:</strong> {product.weight}</p>}
-                {product.brand && <p><strong>Brand:</strong> {product.brand}</p>}
+                {product.dimensions && <p><strong>Dimensions:</strong> {product.dimensions}</p>}
               </div>
             </div>
           </div>
